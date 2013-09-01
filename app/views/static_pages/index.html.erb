@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="large-12 columns">
+		<h1> Hey gretzky!</h1>
+	</div>
+</div>	
+
+
+<div class="row">
+	<%= form_for Tweet.new do |f| %>
+		<div class="large-4 columns">
+			<%= f.label :body, "Tweet Body" %>
+		</div>
+		<div class="large-6  columns">
+			<%= f.text_field :body %>
+		</div>
+		<div class="large-2 columnds">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>
+<% @tweets.each do |tweet| %>
+	<div class="row">
+		<div class="large-12 columns">
+			<h4><%= tweet.body %></h4>
+		</div>
+	</div>
+<% end %>
